@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0D192C;
+    font-family: 'Outfit', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    width: 350px;
+    height: 596px;
+    padding: 24px;
+    overflow: hidden;
+
+    background: #15263F;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.0952917);
+    border-radius: 15px;
+}
+
+.image {
+    position: relative;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.image::after {
+    background: hsla(178, 100%, 50%, 0.373);
+    content: url(./images/icon-view.svg);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.25s ease;
+}
+
+.image:hover::after {
+    opacity: 1;
+}
+
+.image img {
+    width: 100%;
+    display: block;
+}
+
+.text-area {
+    margin-top: 24px;
+}
+
+.main-text {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.secondary-text {
+    margin-top: 16px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+    color: #8BACD9;
+}
+
+.additional-texts {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.additional-texts::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #2E405A;
+    top: 40px;
+}
+
+.ethereum {
+    display: flex;
+    align-items: center;
+    gap: 6.50px;
+    font-weight: 600;
+    color: #00FFF8;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    gap: 6.75px;
+    margin-top: 2px;
+    font-weight: 400;
+    color: #8BACD9;
+}
+
+.creator-box {
+    margin-top: 38px;
+    display: flex;
+    max-height: 100%;
+    align-items: center;
+}
+
+.creator-img {
+    border-radius: 50%;
+    border: 2px solid white;
+    width: 33px;
+    height: 33px;
+    display: flex;
+}
+
+.creator-text {
+    display: flex;
+    font-size: 16px;
+    line-height: 20px;
+    color: #8BACD9;
+    padding-left: 16px;
+}
+
+.creator-link {
+    display: flex;
+    text-decoration: none;
+    padding-left: 5px;
+    color: #FFFFFF;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.creator-link:hover {
+    color: #00FFF8;
+
+}
+
+@media only screen and (min-width: 1300px) {}
